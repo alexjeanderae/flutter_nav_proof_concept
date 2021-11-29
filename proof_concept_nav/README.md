@@ -4,3 +4,7 @@ A new Flutter project. Trying to call google maps for using turn by turn navigat
 
 Starting experimentation from this video among others:
 https://www.youtube.com/watch?v=BMbGE7LRwvc
+
+
+## Lessons learnt
+### 1
