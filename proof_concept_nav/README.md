@@ -31,3 +31,14 @@ https://developers.google.com/maps/documentation/urls/get-started
 api=1 is mandatory. "The parameter api=1 identifies the version of Maps URLs this URL is intended for. This parameter is required in every request. The only valid value is 1."
 
 I already encountered this querying when working on websites earliers. It does not require any API key of google. So it is essentially free (TBC?). API keys is discussed here, just for reference https://developers.google.com/maps/documentation/embed/get-api-key
+
+### 3 standard catch error for url launch open did not work
+I tried this simple code block:
+    if (await canLaunch(googleMapUrl)) {
+      await launch(googleMapUrl);
+    } else {
+      throw "Could not open the Map";
+    }
+
+Had to change it to launch(googleMapUrl). 
+The code was always returning false when testing canLaunch and therefore throwing an error. It seems to be a common issue with some late android version. From a quick read there seems to be some work around both by adding permissions, or others. Need to test. 

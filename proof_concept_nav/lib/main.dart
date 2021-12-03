@@ -26,14 +26,16 @@ class MyHomePage extends StatelessWidget {
     return SafeArea(
         child: Scaffold(
             body: Container(
-                child: TextButton(
-      style: TextButton.styleFrom(backgroundColor: Colors.amber),
-      onPressed: () {
-        MapUtils.openMap(latitude_to_pass, longitude_to_pass);
-      },
-      child: Text(
-        "Open Google Maps",
-        style: TextStyle(color: Colors.black),
+                child: Center(
+      child: TextButton(
+        style: TextButton.styleFrom(backgroundColor: Colors.amber),
+        onPressed: () {
+          MapUtils.openMap(latitude_to_pass, longitude_to_pass);
+        },
+        child: Text(
+          "Open Google Maps",
+          style: TextStyle(color: Colors.black),
+        ),
       ),
     ))));
   }
