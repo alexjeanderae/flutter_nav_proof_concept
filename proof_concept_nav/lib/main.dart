@@ -15,24 +15,26 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: MyHomePage(),
     );
   }
 }
 
-@override
-Widget build(BuildContext context) {
-  return SafeArea(
-      child: Scaffold(
-          body: Container(
-              child: TextButton(
-    style: TextButton.styleFrom(backgroundColor: Colors.amber),
-    onPressed: () {
-      MapUtils.openMap(latitude_to_pass, longitude_to_pass);
-    },
-    child: Text(
-      "Open Google Maps",
-      style: TextStyle(color: Colors.black),
-    ),
-  ))));
+class MyHomePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return SafeArea(
+        child: Scaffold(
+            body: Container(
+                child: TextButton(
+      style: TextButton.styleFrom(backgroundColor: Colors.amber),
+      onPressed: () {
+        MapUtils.openMap(latitude_to_pass, longitude_to_pass);
+      },
+      child: Text(
+        "Open Google Maps",
+        style: TextStyle(color: Colors.black),
+      ),
+    ))));
+  }
 }
